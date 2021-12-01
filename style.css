@@ -1,0 +1,491 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/************************************************/
+/**HAZIR SINIFLAR**/
+.w-100{
+    width: 100% !important;
+}
+.h-auto{
+    height: auto !important;
+}
+.d-flex{
+    display: flex;
+}
+.v-hidden{
+    visibility: hidden;
+}
+
+
+/************************************************/
+/**AÇILIŞ KUTUSU**/
+.sayfa-acilis-introsu{
+    position: fixed;
+
+    height: 100vh;
+
+    background-color: #a4a6a8;
+
+    animation: sayfa-acilis-kutu-silme 1.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 1s both;
+}
+.sayfa-acilis-introsu .intro-yazisi{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    
+    color: white;
+
+    margin-top: 44vh;
+}
+
+/************************************************/
+/**ANA SAYFA**/
+.sayfa{
+    animation: sayfa-acilis-opaklık 0.3s cubic-bezier(.895,.03,.685,.22) 2.3s both;
+}
+
+/************************************************/
+/**HEADER**/
+.header{
+    position: absolute;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 2;
+
+    padding: 10px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    background-color: transparent;
+}
+header img{
+    width: 100px;
+    animation: eleman-acilis 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.8s both;
+}
+nav{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    animation: eleman-acilis 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.9s both;
+}
+nav a{
+    position: relative;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: white;
+    margin-right: 40px;
+}
+nav a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+nav a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/************************************************/
+/**MAİN**/
+main{
+    position: relative;
+    height: 95vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main img{
+    left: 0;
+    top: -150px;
+    width: 100%;
+
+    position: absolute;
+    z-index: -1;
+
+    animation: main-bg-buyut 20s linear 3.5s both;
+}
+main h1{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    z-index: 1;
+
+    animation: eleman-acilis 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+}
+
+/************************************************/
+/**HAKKIMIZDA ÖZET**/
+.hakkimizda-ozet{
+    padding: 90px 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.hakkimizda-ozet .hakkimizda-sol-kutu{
+    width: 45%;
+    background-color:#dcdee0;
+    opacity: 0;
+    overflow: hidden;
+}
+.hakkimizda-sol-kutu .hakkimizda-sol-foto{
+    overflow: hidden;
+    float: right;
+    width: 70%;
+    margin: 30px 30px 30px 0;
+}
+.hakkimizda-sol-foto img{
+    width: 100%;
+}
+.hakkimizda-sag-kutu{
+    padding: 30px 10px;
+    width: 45%;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+.hakkimizda-sag-slogan{
+    font-size: 14px;   
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+.hakkimizda-sag-yazi{
+    font-size: 16px;
+    font-weight: 300;
+}
+.hakkimizda-sag-yazi a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    top: 10px;
+}
+.hakkimizda-sag-yazi a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.hakkimizda-sag-yazi a:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+#hakkimizda-baslik{
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 75px;
+}
+
+/************************************************/
+/**BİZE ULAŞIN**/
+.bize-ulasin{
+    padding: 30px 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F5F6;
+}
+.bize-ulasin-baslik{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.bize-ulasin-metin{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/************************************************/
+/**ÇOCUK SAYFALAR**/
+.cocuk-sayfa-header{
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.cocuk-nav a{
+    color: black;
+}
+.cocuk-nav a:before{
+    background-color: black;
+}
+.cocuk-main{
+    padding: 0 10.5vw 10.5vw 10.5vw;
+}
+.cocuk-sayfa-isim{
+    font-size: 12vw;
+    font-family: 'Playfair Display', serif;
+    color: #f2f2f2;
+    top: 5.3vw;
+    position: relative;
+    z-index: 0;
+    
+}
+.cocuk-sayfa-icerik{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height:auto;
+    background-color: #eaeaea;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cocuk-sayfa-icerik-sol{
+    width: 50%;
+}
+.cocuk-sayfa-icerik-sag{
+    width: 50%;
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/************************************************/
+/**HAKKIMIZDA SAYFASI**/
+.hakkimizda-metin{
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+/************************************************/
+/**İŞ ORTAKLARIMIZ SAYFASI**/
+.is-ortaklari-markalar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.markalar-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.markalar-row img{
+    width: 30%;
+}
+/************************************************/
+/**FAALİYET ALANLARI SAYFASI**/
+.faaliyet-metin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.faaliyet-metin div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faaliyet-metin p{
+    padding: 12px;
+    border-radius: 3px;
+    margin: 5px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.faaliyet-metin #p1 {
+    background-color: #49654e;
+}
+.faaliyet-metin #p2 {
+    background-color: #8ba889;
+}
+.faaliyet-metin #p3 {
+    background-color: #c0cfb2;
+}
+.faaliyet-metin #p4 {
+    background-color: #e4e6d9;
+}
+
+
+
+/************************************************/
+/**MEDİA**/
+@media (min-width:900px) {
+    .header-fixed{
+        position: fixed;
+    
+        background-color:#000000;
+        
+        animation: header-acilis 0.5s ease-in both;
+    }
+    .header-fixed a{
+        color: white;
+    }
+    .header-fixed a:before{
+        background-color: white;
+    }
+}
+@media (max-width:900px) {
+    .header{  
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    nav{
+        flex-direction: column;
+    }
+    nav a{
+        margin: 10px 0;
+    }
+    main img{
+        top: 0;
+        left: auto;
+        height: 100%;
+        width: auto;
+    }
+    main h1{
+        font-size: 2em;
+    }
+    .hakkimizda-ozet{
+        padding: 50px 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hakkimizda-ozet .hakkimizda-sol-kutu , .hakkimizda-ozet .hakkimizda-sag-kutu{
+        width: 100%;
+    }
+    .bize-ulasin-baslik{
+        font-size: 20px;
+    }
+    .bize-ulasin-metin{
+        font-size: 14px;
+    }
+    .cocuk-sayfa-icerik-sag ,.cocuk-sayfa-icerik-sol{
+        width: 100%;
+    }
+    .faaliyet-metin div{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/************************************************/
+/**ANİMASYONLAR**/
+
+@keyframes sayfa-acilis-kutu-silme {
+    0%{height: 100vh;} 
+    100%{height: 0;}
+}
+@keyframes sayfa-acilis-opaklık {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes header-acilis {
+    0%{
+        top: -80px;
+        left: 0;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+@keyframes main-bg-buyut {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+@keyframes foto-buyut {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+@keyframes foto-kucult {
+    0%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.foto-buyut{
+    animation: foto-buyut 0.5s ease both;
+}
+.foto-kucult{
+    animation: foto-kucult 0.5s ease both;
+}
+@keyframes eleman-acilis {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.eleman-acilis{
+    visibility: visible;
+    animation: eleman-acilis 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes hakkimizda-ozet-acilis-anim {
+    0% {
+        transform: scaleX(0);
+        transform-origin: 0% 0%;
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+        transform-origin: 0% 0%;
+        opacity: 1;
+    }
+  }
+.hakkimizda-ozet-acilis{
+    animation: hakkimizda-ozet-acilis-anim 1.2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
+}
+@keyframes hakkimizda-foto-acilis-anim {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.hakkimizda-foto-acilis{
+    animation: hakkimizda-foto-acilis-anim 1.2s cubic-bezier(0.860, 0.000, 0.070, 1.000) 1s both;
+}
